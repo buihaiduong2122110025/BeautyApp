@@ -1,40 +1,55 @@
-    # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# Learn more: https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-    # dependencies
-    node_modules/
+# ─── DEPENDENCIES ───────────────────────────────────────────────
+node_modules/
 
-    # Expo
-    .expo/
-    dist/
-    web-build/
-    expo-env.d.ts
+# ─── EXPO & METRO ───────────────────────────────────────────────
+.expo/
+.expo-shared/
+web-build/
+dist/
+expo-env.d.ts
+.metro-health-check*
 
-    # Native
-    .kotlin/
-    *.orig.*
-    *.jks
-    *.p8
-    *.p12
-    *.key
-    *.mobileprovision
+# ─── BUILD CACHES ───────────────────────────────────────────────
+*.log
+*.tsbuildinfo
+*.orig
+*.iml
 
-    # Metro
-    .metro-health-check*
+# ─── NATIVE (ANDROID / IOS) ─────────────────────────────────────
+android/.gradle/
+android/app/build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+ios/
+.kotlinc/
 
-    # debug
-    npm-debug.*
-    yarn-debug.*
-    yarn-error.*
+# ─── DEBUGGING & TEMP FILES ─────────────────────────────────────
+npm-debug.*
+yarn-debug.*
+yarn-error.*
 
-    # macOS
-    .DS_Store
-    *.pem
+# ─── ENVIRONMENT CONFIG ─────────────────────────────────────────
+.env
+.env*.local
+credentials.json
 
-    # local env files
-    .env*.local
+# ─── MACOS / WINDOWS SYSTEM FILES ───────────────────────────────
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
 
-    # typescript
-    *.tsbuildinfo
+# ─── EDITORS / IDE SETTINGS ─────────────────────────────────────
+.vscode/
+.idea/
 
-    app-example
-    /ios
+# ─── SAMPLE / DEMO FILES ────────────────────────────────────────
+app-example/
+
+# ─── CUSTOM ─────────────────────────────────────────────────────
+google-services.json
